@@ -1,0 +1,17 @@
+<div style="text-align:center">
+  <h1>
+    Find people who Hate the same things you do!
+  </h1>
+  <p class="lead">Sign up to view matches! Stay anonymous if you want, even though I hate that!</p>
+  <div class="text-center">
+    <button class="btn btn-primary btn-lg" (click)="registerToggle()">Register</button>
+    <button class="btn btn-info btn-lg">Hate, I mean Learn More</button>
+  </div>
+</div>
+
+<div *ngIf="registerMode" class="container">
+  <div class="col-md-4 col-md-offset-4">
+    <app-register [valuesFromHome]="values" (cancelRegister)="cancelRegisterMode($event)"></app-register>
+  </div>
+</div>
+
